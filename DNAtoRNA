@@ -16,14 +16,17 @@ for (i=0;i<DNA.length;i++)
               break;
             case "t":RNA+="a"
               break ;
-              case "Tt":RNA+="a"
+              case "T":RNA+="a"
               break ;
             case "a":RNA+="u" 
              break;
              case "A":RNA+="u" 
              break; 
+              case "":return alert ('Введите знак')
+             break; 
              default:
-             return alert ('Вы ввели неверный знак '+DNA[i]);
+             return alert ('Некорректный нуклиатид "' +DNA[i]+ '"');
+          
         }
 
     }
