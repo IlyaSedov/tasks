@@ -1,0 +1,32 @@
+function dna (DNA)
+{ 
+let RNA="";
+for (i=0;i<DNA.length;i++)
+    {
+  
+        switch (DNA[i])
+        {
+            case "g":RNA+="c" 
+             break;
+             case "G":RNA+="c" 
+             break;
+            case "c":RNA+="g"
+              break;
+              case "C":RNA+="g"
+              break;
+            case "t":RNA+="a"
+              break ;
+              case "Tt":RNA+="a"
+              break ;
+            case "a":RNA+="u" 
+             break;
+             case "A":RNA+="u" 
+             break; 
+             default:
+             return alert ('Вы ввели неверный знак '+DNA[i]);
+        }
+
+    }
+  
+  return RNA ;
+}
