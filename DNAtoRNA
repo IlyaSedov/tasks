@@ -2,34 +2,26 @@ function dna (DNA)
 { 
 let RNA="";
 for (i=0;i<DNA.length;i++)
-    {
-  
-        switch (DNA[i])
-        {
-            case "g":RNA+="c" 
-             break;
-             case "G":RNA+="c" 
-             break;
-            case "c":RNA+="g"
-              break;
-              case "C":RNA+="g"
-              break;
-            case "t":RNA+="a"
-              break ;
-              case "T":RNA+="a"
-              break ;
-            case "a":RNA+="u" 
-             break;
-             case "A":RNA+="u" 
-             break; 
-              case "":return alert ('Введите знак')
-             break; 
-             default:
-             return alert ('Некорректный нуклиатид "' +DNA[i]+ '"');
-          
-        }
-
-    }
-  
-  return RNA ;
+  {
+    switch (DNA[i])
+      {
+        case "g":
+        case "G":RNA+="c" 
+         break;
+        case "c":
+        case "C":RNA+="g"
+         break;
+        case "t":
+        case "T":RNA+="a"
+         break ;
+        case "a":
+        case "A":RNA+="u" 
+         break;
+        case "":return alert ('Введите знак')
+         break; 
+        default:
+         return`Некорректный нуклиатид ${DNA[i]}`;
+      }
+  }
+   return RNA ;
 }
