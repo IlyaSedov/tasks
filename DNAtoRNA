@@ -1,6 +1,8 @@
 function dna (DNA)
 { 
 let RNA="";
+if (typeof DNA !== 'string') throw new TypeError("Данные некорректны");
+else if (DNA.length == 0) return 'Введите последовательность ДНК';
 for (i=0;i<DNA.length;i++)
   {
     switch (DNA[i])
