@@ -1,0 +1,16 @@
+const isPalindrome = (str) => {
+  if (typeof str !== 'string') throw new TypeError('Данные некорректны');
+  else if (str.length === 0) return 'Пустая строка';
+  else if (str.length == 1) return true;
+  const result = (count) => {
+    if (count.length < 2) {
+      return true;
+    }
+    else if (count[0] !== count[count.length - 1]) {
+      return false;
+    }
+    return result(count.slice(1, -1));
+  }
+  return result(str);
+}
+export default isPalindrome();
