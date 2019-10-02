@@ -9,7 +9,7 @@ const isPalindrome = (str) => {
     if (count.length < 2) {
       return true;
     }
-    else if (count[0] !== count[count.length - 1]) {
+    if (count[0] !== count[count.length - 1]) {
       return false;
     }
 
