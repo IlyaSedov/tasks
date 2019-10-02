@@ -19,3 +19,4 @@ const isPalindrome = (str) => {
   return result(str);
 };
 
+export default isPalindrome();
