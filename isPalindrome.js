@@ -2,7 +2,7 @@ const isPalindrome = (str) => {
   const patternOne = /[^0-9,+-]/;
   if ((typeof str !== 'string') && (typeof str !== 'number')) throw new TypeError('The data is incorrect');
   str = String(str);
-  if (str.length === 0) throw new TypeError('empty string');
+  if (str.length === 0) throw new Error('empty string');
   if (str.length === 1) return true;
 
   const result = (count) => {
