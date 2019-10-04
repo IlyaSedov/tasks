@@ -1,7 +1,7 @@
 const apply = (count, fun, val) => {
   const patternOne = /^\d*$/,
-    typCountStr = typeof count == 'string',
-    typValStr = typeof val == 'string';
+    typCountStr = typeof count === 'string',
+    typValStr = typeof val === 'string';
   
   if (val === undefined) return console.log('одно или несколько значений не переданы')
   if ((fun === undefined) || (typeof fun != 'function')) return console.log('функция не передана')
