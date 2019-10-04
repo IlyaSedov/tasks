@@ -3,11 +3,11 @@ const apply = (count, fun, val) => {
     typCountStr = typeof count === 'string',
     typValStr = typeof val === 'string';
   
-  if (val === undefined) return console.log('одно или несколько значений не переданы')
-  if ((fun === undefined) || (typeof fun != 'function')) return console.log('функция не передана')
+  if (val === undefined) return console.log('one or more values are not passed')
+  if ((fun === undefined) || (typeof fun != 'function')) return console.log('the function is not passed')
   if ((typCountStr === true) && (count.search(patternOne) >= 0)) count = Number(count);
   if ((typValStr === true) && (val.search(patternOne) >= 0)) val = Number(count);
-  if ((typeof count != 'number') || (typeof val != 'number')) throw new TypeError('Данные некорректны');
+  if ((typeof count != 'number') || (typeof val != 'number')) throw new TypeError('The data is incorrect');
   if (count < 0) count = 0;
 
   if (count === 0) {
