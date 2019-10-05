@@ -6,7 +6,7 @@ const apply = (count, fun, val) => {
   if (val === undefined) return console.log('one or more values are not passed')
   if ((fun === undefined) || (typeof fun != 'function')) return console.log('the function is not passed')
   if ((typCountStr === true) && (count.search(patternOne) >= 0)) count = Number(count);
-  if ((typValStr === true) && (val.search(patternOne) >= 0)) val = Number(count);
+  if ((typValStr === true) && (val.search(patternOne) >= 0)) val = Number(val);
   if ((typeof count != 'number') || (typeof val != 'number')) throw new TypeError('The data is incorrect');
   if (count < 0) count = 0;
 
