@@ -7,6 +7,7 @@ const apply = (count, fun, val) => {
   if ((typCountStr === true) && (count.search(patternOne) >= 0)) count = Number(count);
   if (typeof count != 'number') throw new TypeError('The data is incorrect');
   if (count < 0) count = 0;
+  if ((count ^ 0) !== count) count = Number(count.toFixed());
 
   if (count === 0) {
     return val;
