@@ -1,17 +1,20 @@
-const substr = (str, startIndex = 0, lengthStr = str.length) => {
-  let finishSubstr = '';
-  
-  if (typeof str !== 'string') throw new TypeError('The data is incorrect');
-  if ((str.length === 0) || (startIndex > str.length) || (lengthStr === 0)) return console.log(''); 
-  if (lengthStr < 0) lengthStr = 1;
-  if (startIndex < 0) startIndex = 0;
-  if ((startIndex + lengthStr - 1) > str.length) lengthStr = str.length - startIndex;
-  
-  for (let i = startIndex; i < (startIndex + lengthStr); i++) {
-    finishSubstr += str[i];
+const substr = (str, firstIndex = 0, strLength = str.length) => {
+  let a = '';
+
+  firstIndex = Number(firstIndex);
+  strLength = Number(strLength);
+
+  if (typeof str !== 'string') return 'Некорректные данные';
+  if (str.length === 0 || strLength === 0 || firstIndex > str.length) return '';
+  if (strLength < 0) strLength = 1;
+  if (firstIndex < 0) firstIndex = 0;
+  if ((firstIndex + strLength) > str.length) strLength = str.length - firstIndex;
+
+  for (let i = firstIndex; i < (firstIndex + strLength); i++) {
+    a += str[i];
   }
 
-  return finishSubstr;
+  return a;
 };
 
-export default substr;
+export default substr();
